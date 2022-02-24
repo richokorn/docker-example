@@ -1,3 +1,7 @@
+#### Setup:
+
+1. $
+
 #### Some commands
 
 $ docker swarm init
