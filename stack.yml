@@ -1,9 +1,17 @@
 version: '3.8'
+# This version fails to startup MariaDB database container
+# Look at the log output to find out why
+# Use "docker ps -a" to list all (including stopped) containers
+# Use "docker logs [cointainerid]" to find out why MariaDB is not starting up
 services:
   mymatomo:
     image: matomo
     ports:
       - 80:80
+    networks:
+      - mynetwork
+  mydatabase:
+    image: mariadb
     networks:
       - mynetwork
 networks:
