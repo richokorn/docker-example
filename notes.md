@@ -10,4 +10,12 @@ $ docker stack deploy -c stack.yml MyStack
 
 $ docker stack ls
 $ docker stack services MyStack
-$ docker stack rm MyStack
+
+- Configure you Matomo Analytics
+  $ docker stack rm MyStack
+  $ docker stack deploy -c stack.yml MyStack
+
+in browser: localhost
+
+(it flag = interactive mode)
+$ docker exec -it <dockerId or name> /bin/sh
